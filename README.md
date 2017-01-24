@@ -1,26 +1,24 @@
-[![](https://jitpack.io/v/bmoliveira/snake-yaml.svg)](https://jitpack.io/#bmoliveira/snake-yaml)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-snake--yaml-green.svg?style=flat-square)](http://android-arsenal.com/details/1/3441)
-
 ***The art of simplicity is a puzzle of complexity.***
 
-## Android jitpack version ##
+## Android Maven Central version ##
 
-This version is a port from the original repository.
+This version is a fork of a port from the original repository. Upstream, forked repository: [bmoliveira/snake-yaml](https://github.com/bmoliveira/snake-yaml).
 
-Changes made:
+This repository exists only because fork is not available on Maven Central: [issue](https://github.com/bmoliveira/snake-yaml/issues/2). There is no code differences between upstream and this repo.
+
+Changes made in upstream fork:
 
 - Android maven deploy profile changes applied
 - Some removed some javadoc generator lines that were thowing javadoc generator errors (follow the original javadocs)
 
-With this version you can use snakeyaml directly from jitpack!
+With this version you can use snakeyaml directly from Maven Central!
 
-Just add jitpack to repositories
+Just add mavenCentral to repositories if there is not already there.
 
 ```groovy
 allprojects {
 	repositories {
-	...
-	maven { url "https://jitpack.io" }
+	mavenCentral()
   }
 }
 ```
@@ -28,7 +26,7 @@ And the dependency
 
 ```groovy
 dependencies {
-	compile 'com.github.bmoliveira:snake-yaml:v1.18-android'
+	compile 'pl.droidsonroids:snake-yaml:v1.18-android'
 }
 ```
 
